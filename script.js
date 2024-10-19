@@ -17,6 +17,9 @@ btn.forEach(function(btn) {
             y = '' ;
             operatorbtn = '' ;
         } 
+        else if (btn.innerText == 'Del') {
+            result.innerText =result.innerText.slice(0,result.innerText.length -1) ;
+        }
         else {
             if(operatorbtn == '') {
                 x= x + btn.innerText;
@@ -48,7 +51,7 @@ equals.addEventListener('click', function() {
     if (operatorbtn == '/') {
         results =( Number(x) / Number(y));
     }
-    x = '' ;
+    x = results  ;
     y = '' ;
     operatorbtn = '' ;
     result.innerHTML =results;
